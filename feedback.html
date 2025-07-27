@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Citizen Feedback</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🗣️ Citizen Feedback Portal</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <textarea name="comment" placeholder="Your suggestions..." rows="4" required></textarea><br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        {% if message %}
+            <p style="color:green; margin-top:10px;">{{ message }}</p>
+        {% endif %}
+        <a href="/"><button>⬅ Back to Home</button></a>
+    </div>
+</body>
+</html>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f4f7;
+            padding: 30px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2a3f54;
+        }
+        input[type="text"], textarea {
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }

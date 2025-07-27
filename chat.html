@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Planner Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🤖 AI Planner Assistant</h2>
+        <form method="POST">
+            <input type="text" name="query" placeholder="Ask a planning question..." required>
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if query %}
+            <div style="margin-top:20px;">
+                <p><strong>You:</strong> {{ query }}</p>
+                <p><strong>AI:</strong> {{ response }}</p>
+            </div>
+        {% endif %}
+
+        <a href="/"><button>⬅ Back to Home</button></a>
+    </div>
+</body>
+</html>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f4f7;
+            padding: 30px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2a3f54;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>

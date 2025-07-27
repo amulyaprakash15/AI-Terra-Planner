@@ -1,0 +1,63 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Smart Planner</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #2980b9, #6dd5fa);
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    form {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      max-width: 500px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 AI Smart City & Village Planner</h1>
+  <form action="/result" method="post">
+    <input type="text" name="location" placeholder="Enter Location" required>
+    <input type="number" name="population" placeholder="Estimated Population" required>
+    <input type="text" name="terrain" placeholder="Terrain Type (e.g., Plain, Hilly)" required>
+    <input type="text" name="resources" placeholder="Natural Resources (comma-separated)" required>
+    <input type="text" name="climate" placeholder="Climate Type (e.g., Tropical, Arid)" required>
+    
+    <label for="city_type">Select Planning Type:</label>
+    <select name="city_type" required>
+      <option value="city">Smart City</option>
+      <option value="village">Smart Village</option>
+    </select>
+    
+    <button type="submit">Generate Plan</button>
+  </form>
+</body>
+</html>
+<!DOCTYPE html>
+    </style>
